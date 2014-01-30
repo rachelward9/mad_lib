@@ -1,0 +1,16 @@
+<polymer-element name="main-view">
+  <template>
+    <h1>Mad Lib</h1>
+  
+    
+    <div class="box-container">
+      <template repeat="{{item in wordList}}">
+        <form on-submit="{{insertWord}}">
+              <input type="text" placeholder="Enter {{item}}..." value="{{userWord}}">
+          </form>
+      </template>
+    </div>
+  </template>
+
+  <script type="application/dart" src="main_view.dart"></script>
+</polymer-element>
