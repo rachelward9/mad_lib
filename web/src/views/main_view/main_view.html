@@ -4,13 +4,21 @@
   
     
     <div class="box-container">
-      <template repeat="{{item in wordList}}">
-        <form on-submit="{{insertWord}}">
-              <input type="text" placeholder="Enter {{item}}..." value="{{userWord}}">
-          </form>
-      </template>
+      <form on-submit="{{insertWord}}">
+        <!-- <template repeat="{{item in wordList}}">
+          <input type="text" placeholder="Enter {{item}}..." value="{{userWord}}">
+        </template> -->
+        <input type="text" placeholder="Enter {{wordList[0]}}..." value="{{adj1}}"></input>
+        <input type="text" placeholder="Enter {{wordList[1]}}..." value="{{noun}}"></input>
+        <input type="text" placeholder="Enter {{wordList[2]}}..." value="{{adj2}}"></input>
+        <input type="text" placeholder="Enter {{wordList[3]}}..." value="{{verb}}"></input>
+        <input type="text" placeholder="Enter {{wordList[4]}}..." value="{{adv}}"></input>
+        <button>Generate Mad Lib</button>
+      </form>
+      <p>There was once a {{adj1}} {{noun}}. The {{adj1}} {{noun}} was a very {{adj2}} being. 
+         Frequently, the {{noun}} would {{verb}}. When it did so, it did it {{adv}}.</p>
     </div>
   </template>
-
+    
   <script type="application/dart" src="main_view.dart"></script>
 </polymer-element>

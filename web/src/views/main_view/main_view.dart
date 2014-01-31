@@ -2,6 +2,7 @@ library main_view;
 
 import 'dart:html';
 import 'package:polymer/polymer.dart';
+import '../../model/word.dart';
 
 @CustomTag('main-view')
 class MainView extends PolymerElement {
@@ -14,10 +15,12 @@ class MainView extends PolymerElement {
     "adverb"
   ];
   
-  List<String> userWordList = [];
+  @observable String adj1;
+  @observable String noun;
+  @observable String adj2;
+  @observable String verb;
+  @observable String adv;
   
-  @observable String userWord;
-
   // non-visual initialization can be done here
   MainView.created() : super.created();
 
@@ -29,14 +32,13 @@ class MainView extends PolymerElement {
 
   void insertWord(Event event, var detail, Element target) {
     event.preventDefault();
-    
-    userWord = userWord.trim();
-    
-    if (userWord.isNotEmpty) {
-      userWordList.add(userWord);
-      userWord = "";
-    }
-  }
+    print("insertWord");
+    print(adj1);
+    print(noun);
+    print(adj2);
+    print(verb);
+    print(adv);
+  }   
 
   // prevent app reload on <form> submission
   void submit(Event event, var detail, Element target) {
