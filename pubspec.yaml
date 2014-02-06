@@ -1,5 +1,5 @@
-name: Polymer_Template
-description: A Polymer Dart application.
+name: mad_lib
+description: A polymer Mad Lib app that takes the users input for missing words and places them into a pre-generated story.
 dependencies:
   polymer: any
 transformers:
